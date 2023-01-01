@@ -12,13 +12,11 @@ import streamlit as st
 import plotly.express as px
 import numpy as np
 import pandas as pd
-import locale
 from streamlit_extras.dataframe_explorer import dataframe_explorer
 from streamlit_toggle import st_toggle_switch as switch
 
 
 st.set_page_config(page_title="Supermarket Sales Dash-Board", page_icon=":bar_chart:", layout="wide")
-locale.setlocale(locale.LC_ALL, "de_DE")
 
 
 @st.cache
@@ -31,7 +29,9 @@ def start(selected_file):
     st.title(":bar_chart: Sales Dashboard") # create title
     st.markdown("##")
     left, right = st.columns(2)
-    left.metric(label="Total Sales", value=locale.format_string("€ %d", df["Total"].sum(), 1))
+    thousand_sep = (format(df["Total"].sum(), ',.2f'))
+    value = "€ %s" % thousand_sep
+    left.metric(label="Total Sales", value=value)
     with right:
         switch_explorer = switch(label="Enable DataFrame Explorer", key="switch_explorer", default_value=True)
     st.markdown("---")
