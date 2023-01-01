@@ -18,7 +18,7 @@ from streamlit_toggle import st_toggle_switch as switch
 
 
 st.set_page_config(page_title="Supermarket Sales Dash-Board", page_icon=":bar_chart:", layout="wide")
-locale.setlocale(locale.LC_ALL, "en_US.utf-8")
+locale.setlocale(locale.LC_ALL, "de_DE")
 
 
 @st.cache
