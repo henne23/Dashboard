@@ -1,7 +1,7 @@
 
 # Supermarket
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/henne23/Dashboard/Supermarket/supermarket_stream.py)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/henne23/Dashboard/Supermarket/supermarket_stream.py/)
 
 Using Streamlit to build an interactive dashboard for supermarket data.
 ## Authors
